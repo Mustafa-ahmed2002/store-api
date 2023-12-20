@@ -1,0 +1,12 @@
+const express = require("express");
+const a = require("../models/Admin");
+const router = express.Router();
+router.post("/register", a.adminsRegister);
+router.post("/login", a.adminsLogin);
+router.get("/products/view", a.viewProducts);
+router.post("/products/add", a.addProducts);
+router.put("/products/update/:id", a.updateProducts);
+router.delete("/products/delete/:id", a.deleteProducts);
+router.get("/orders/view", a.viewOrders);
+router.put("/orders/changeStatues/:id", a.changeOrders);
+module.exports = router;
