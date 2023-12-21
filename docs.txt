@@ -1,0 +1,74 @@
+                             //////  Admins API//////
+ Register Admin
+
+Endpoint: POST /api/v1/admins/register
+Request Body: { "username": "", "password": "" }
+
+
+
+Login Admin
+
+Endpoint: POST /api/v1/admins/login
+Request Body: { "username": "registeredUsername", "password": "registeredPassword" }
+
+
+View Products
+
+Endpoint: GET /api/v1/admins/products/view
+Query Parameters: search, skip, limit
+
+
+Add Product
+
+Endpoint: POST /api/v1/admins/products/add
+Request Body: { "name": "Product", "price": 10, "discount": 5, "image": "url", "active": true }
+
+
+Update Product
+
+Endpoint: PUT /api/v1/admins/products/update/:id
+name, price, discount, image, active 
+Request Body: { "name": "UpdatedProduct", price : "updatedPrice", ....  }
+
+
+
+Delete Product
+
+Endpoint: DELETE /api/v1/admins/products/delete/:id
+
+
+View Orders
+
+Endpoint: GET /api/v1/admins/orders/view
+
+
+Change Order Status
+
+Endpoint: PUT /api/v1/admins/orders/changeStatues/:id
+Request Body: { "items": "...", "userId": "...", "address": "...", "date": "...", "status": "..." }
+
+
+
+                                          /// Users API////
+View Products
+
+Endpoint: GET /api/v1/users/products/view
+Query Parameters: search, skip, limit
+
+
+Add Order
+
+Endpoint: POST /api/v1/users/orders/add
+Request Body: { "items": "...", "userID": "...", "address": "...", "date": "...", "status": "..." }
+
+
+Register User
+
+Endpoint: POST /api/v1/users/register
+Request Body: { "username": "", "password": "" }
+
+
+Login User
+
+Endpoint: POST /api/v1/users/login
+Request Body: { "username": "registeredUsername", "password": "registeredPassword" }
